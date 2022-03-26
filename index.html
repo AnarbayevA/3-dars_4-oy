@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="h1 text-center mt-2">Movie catalog</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col-4 left-side">
+                    <div class="top-side mb-3">
+                        <form action="/action_page.php">
+                            <div class="mb-3 mt-3">
+                                <input type="search" class="form-control" id="movie-name" placeholder="Enter movie name" name="movie_name">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <input type="number" class="form-control reating-number" id="rating" placeholder="Enter movie rating" name="rating" max="9" min="0" step="0.1">
+                            </div>
+                            
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected value="all">All</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                
+                            </select>
+                            
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected value="all">Rating(high to low)</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five</option>
+                                <option value="6">Six</option>
+                                <option value="7">Seven</option>
+                                <option value="8">Eight</option>
+                                <option value="9">Nine</option>
+                            </select>
+                            
+                            
+                            <button type="submit" class="btn btn-primary w-100 submit-reating">Submit</button>
+                        </form>
+                    </div>
+                    
+                    <div class="bottom-side">
+                        <h2 class="h2">Bookmarked movies</h2>
+                        
+                        <ul class="list-group">
+                            <li class="list-group-item p-3">                               
+                                <h3 class="h5">Heading</h3>
+                                
+                                <button type="button" class="btn btn-danger">Danger</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-8 right-side">
+                    <div class="p-3 w-100">
+                        <h2 class="h4">
+                            Search result:
+                            <span id="search-result-num">0</span>
+                        </h2>
+                        
+                        <div class="alert alert-primary" role="alert">
+                            Use left side for searching
+                        </div>
+                        <a href="" target=""></a>
+                        <ul class="row list-inline" id="movie_list">
+                            <li class="col-6 mb-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">John Doe</h4>
+                                        
+                                        <p class="card-text fs-5 d-flex align-items-center">
+                                            <img class="me-1" src="https://picsum.photos/20" alt="" width="20" height="20"> 
+                                            <span id="movie-year">2018</span>
+                                        </p>
+                                        
+                                        <p class="card-text fs-5 d-flex align-items-center">
+                                            <img class="me-1" src="https://picsum.photos/20" alt="" width="20" height="20"> 
+                                            <span id="movie-rating">8.7</span>
+                                        </p>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                            <button type="button" class="btn btn-outline-info">More info</button>
+                                            <button type="button" class="btn btn-outline-success">Bookmark</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-6 mb-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://picsum.photos/500/300" alt="Card image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">John Doe</h4>
+                                        
+                                        <p class="card-text fs-5 d-flex align-items-center">
+                                            <img class="me-1" src="https://picsum.photos/20" alt="" width="20" height="20"> 
+                                            <span id="movie-year">2018</span>
+                                        </p>
+                                        
+                                        <p class="card-text fs-5 d-flex align-items-center">
+                                            <img class="me-1" src="https://picsum.photos/20" alt="" width="20" height="20"> 
+                                            <span id="movie-rating">8.7</span>
+                                        </p>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                            <button type="button" class="btn btn-outline-info">More info</button>
+                                            <button type="button" class="btn btn-outline-success">Bookmark</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                        
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+    
+    <footer class="footer">
+        
+    </footer>
+    <script src="./js/movies.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
